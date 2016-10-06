@@ -6,7 +6,7 @@ var runSequence = require('run-sequence');
 gulp.task('build', function(callback) {
   runSequence(
     ['styles:cf', 'scripts:cf', 'clean:tmp'],
-    ['template:readmes', 'copy:components:boilerplate'],
+    ['template:readmes', 'copy:components:boilerplate', 'icons'],
     ['copy:components:source', 'template:usage', 'copy:components:manifest'],
     ['styles:components', 'scripts:components', 'styles:grid']
   );
